@@ -7,4 +7,5 @@ fetch ('http://localhost:5678/api-docs/')
     console.log(json)
 })
  Get ('http://localhost:5678/api/works')
+ Get ('http://localhost:5678/api/categories')
  
