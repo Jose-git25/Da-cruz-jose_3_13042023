@@ -6,3 +6,5 @@ fetch ('http://localhost:5678/api-docs/')
 }).then(json=>{
     console.log(json)
 })
+ Get ('http://localhost:5678/api/works')
+ 
