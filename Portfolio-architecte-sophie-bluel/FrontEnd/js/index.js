@@ -17,6 +17,25 @@ const apiWorks = async () => {
      console.log("Erreur dans la récupération des données :", error)   
     }     
 
+}; 
+let works =[];   
+const apiCategories = async () => {
+    try {
+        await fetch ("http://localhost:5678/api/works" ,{
+            method: "GET",
+            headers: {
+              Accept: "application/json",  
+            },
+
+        })
+        .then((response) => response.json())
+        .then((WorksResponse)) ; {
+            works=WorksResponse;     
+        };
+    } catch (error)  {
+     console.log("Erreur dans la récupération des données :", error)   
+    }     
+
 };    
 // }
 // fetch ('http://localhost:5678/api-docs/')
