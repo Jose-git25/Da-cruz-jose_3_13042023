@@ -1,45 +1,76 @@
-console.log('hello world')
+console.log("hello world");
 
-let works =[];
-const apiWorks = async () => {
-    try {
-        await fetch ("http://localhost:5678/api/works" ,{
-            method: "GET",
-            headers: {
-              Accept: "application/json",  
-            },
+// let works = [];
+// const apiWorks = async () => {
+//   try {
+//     await fetch("http://localhost:5678/api/works", {
+//       method: "GET",
+//       headers: {
+//         Accept: "application/json",
+//       },
+//     })
+//       .then((response) => response.json())
+//       .then(worksResponse);
+//     {
+//       works = worksResponse;
+//     }
+//   } catch (error) {
+//     console.log("Erreur dans la récupération des données :", error);
+//   }
+// };
 
-        })
-        .then((response) => response.json())
-        .then((WorksResponse)) ; {
-            works=WorksResponse;     
-        };
-    } catch (error)  {
-     console.log("Erreur dans la récupération des données :", error)   
-    }     
+// let categories = [];
+// const apiCategories = async () => {
+//   try {
+//     await fetch("http://localhost:5678/api/categories", {
+//       method: "GET",
+//       headers: {
+//         Accept: "application/json",
+//       },
+//     })
+//       .then((response) => response.json())
+//       .then((categoriesResponse) => {
+//         console.log(categoriesResponse);
+//         categories = categoriesResponse;
+//       });
+//   } catch (error) {
+//     console.log("Erreur dans la récupération des données :", error);
+//   }
+// };
 
-}; 
+fetch("http://localhost:5678/api/works", {
+  method: "GET",
+  headers: {
+    Accept: "application/json",
+  },
+})
+  .then((response) => response.json())
+  .then((works) => {
+    console.log(works);
 
-  let categories = []; 
-const apiCategories = async () => {
-    try {
-        await fetch ("http://localhost:5678/api/works" ,{
-            method: "GET",
-            headers: {
-              Accept: "application/json",  
-            },
+    //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
 
-        })
-        .then((response) => response.json())
-        .then((WorksResponse)) ; {
-            works=WorksResponse;     
-        };
-    } catch (error)  {
-     console.log("Erreur dans la récupération des données :", error)   
-    }  
-       
+    // <figure>
+    //   <img
+    //     src="assets/images/appartement-paris-v.png"
+    //     alt="Appartement Paris V"
+    //   />
+    //   <figcaption>Appartement Paris V</figcaption>
+    // </figure>;
+  });
 
-};    
+// apiCategories();
+
+// console.log(categories);
+
+// const apiCategories = async () => {
+
+// };
+
+// async function apiCategories() {
+
+// }
+
 // }
 // fetch ('http://localhost:5678/api-docs/')
 // .then( data=> {
@@ -52,5 +83,3 @@ const apiCategories = async () => {
 //  fetch ('http://localhost:5678/api/works');{
 //     get/works
 //  }
- 
- 
