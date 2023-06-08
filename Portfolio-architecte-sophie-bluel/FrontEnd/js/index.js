@@ -1,5 +1,6 @@
 console.log('hello world')
 
+let works =[];
 const apiWorks = async () => {
     try {
         await fetch ("http://localhost:5678/api/works" ,{
@@ -18,7 +19,8 @@ const apiWorks = async () => {
     }     
 
 }; 
-let works =[];   
+
+  let categories = []; 
 const apiCategories = async () => {
     try {
         await fetch ("http://localhost:5678/api/works" ,{
@@ -34,7 +36,8 @@ const apiCategories = async () => {
         };
     } catch (error)  {
      console.log("Erreur dans la récupération des données :", error)   
-    }     
+    }  
+       
 
 };    
 // }
