@@ -58,6 +58,11 @@ fetch("http://localhost:5678/api/works", {
     //   <figcaption>Appartement Paris V</figcaption>
     // </figure>;
   });
+// fetch ('http://localhost:5678/api/categories",
+// method: "GET",
+// headers: {
+// Accept: "application/json",
+// }
 
 // apiCategories();
 
@@ -72,7 +77,7 @@ fetch("http://localhost:5678/api/works", {
 // }
 
 // }
-// fetch ('http://localhost:5678/api-docs/')
+// )
 // .then( data=> {
 //     return data.json()
 // }).then(json=>{
