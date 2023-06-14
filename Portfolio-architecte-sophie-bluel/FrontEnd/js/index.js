@@ -49,10 +49,15 @@ fetch("http://localhost:5678/api/works", {
     console.log(works);
 
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
+    // let figure = document.CreateElement();
+    // let figureImg = document.CreateElement(Img);
+    // figureImg.src = "assets/images/appartement-paris-v.png";
+    // figureImg.alt = Appartement Paris V;
 
+    // figure.appenchild(figureImg);
     // <figure>
     //   <img
-    //     src="assets/images/appartement-paris-v.png"
+    //     src=assets/images/appartement-paris-v.png
     //     alt="Appartement Paris V"
     //   />
     //   <figcaption>Appartement Paris V</figcaption>
