@@ -49,12 +49,25 @@ fetch("http://localhost:5678/api/works", {
     console.log(works);
 
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
-    // let figure = document.CreateElement();
-    // let figureImg = document.CreateElement(Img);
-    // figureImg.src = "assets/images/appartement-paris-v.png";
-    // figureImg.alt = Appartement Paris V;
+    let figure = document.createElement("figure");
+    // console.log(figure);
 
-    // figure.appenchild(figureImg);
+    let figureImg = document.createElement("img");
+    figureImg.src = "./assets/images/appartement-paris-v.png";
+    figureImg.alt = "Appartement Paris V";
+    // console.log(figureImg);
+    figure.appendChild(figureImg);
+
+    let figureFigcaption = document.createElement("figcaption");
+
+    figure.appendChild(figureFigcaption);
+
+    // console.log(figureFigcaption);
+    // figureFigcaption;
+    figureFigcaption.textContent = "Appartement Paris V";
+
+    console.log(figureFigcaption);
+
     // <figure>
     //   <img
     //     src=assets/images/appartement-paris-v.png
