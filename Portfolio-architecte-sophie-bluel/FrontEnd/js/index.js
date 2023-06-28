@@ -84,33 +84,19 @@ fetch("http://localhost:5678/api/works", {
     //   <figcaption>Appartement Paris V</figcaption>
     // </figure>;
   });
-// fetch ('http://localhost:5678/api/categories",
-// method: "GET",
-// headers: {
-// Accept: "application/json",
-// }
 
-// apiCategories();
-
-// console.log(categories);
-
-// const apiCategories = async () => {
-
-// };
-
-// async function apiCategories() {
-
-// }
-
-// }
-// )
-// .then( data=> {
-//     return data.json()
-// }).then(json=>{
-//     console.log(json)
+// fetch("http://localhost:5678/api/categories", {
+//   method: "GET",
+//   headers: {
+//     Accept: "application/json",
+//   },
 // })
-// //  get ('http://localhost:5678/api/works');
-// //  get ('http://localhost:5678/api/categories');
-//  fetch ('http://localhost:5678/api/works');{
-//     get/works
-//  }
+//   .then((response) => response.json())
+//   .then((categories) => {
+//     console.log(categories);
+
+//     categories.forEach((categorie) => {
+//       console.log(categorie);
+//       console.log(categorie.title);
+//     });
+//   });
