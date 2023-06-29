@@ -51,6 +51,12 @@ fetch("http://localhost:5678/api/works", {
     works.forEach((work) => {
       console.log(work);
       console.log(work.title);
+
+      let figureImg = document.createElement("img");
+      figureImg.src = work.imageUrl;
+      figureImg.alt = work.title;
+
+      console.log(figureImg);
     });
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
     let figure = document.createElement("figure");
