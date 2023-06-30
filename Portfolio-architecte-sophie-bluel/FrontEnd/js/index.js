@@ -55,7 +55,6 @@ fetch("http://localhost:5678/api/works", {
       let figureImg = document.createElement("img");
       figureImg.src = work.imageUrl;
       figureImg.alt = work.title;
-
       console.log(figureImg);
     });
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
@@ -90,19 +89,18 @@ fetch("http://localhost:5678/api/works", {
     //   <figcaption>Appartement Paris V</figcaption>
     // </figure>;
   });
+fetch("http://localhost:5678/api/categories", {
+  method: "GET",
+  headers: {
+    Accept: "application/json",
+  },
+})
+  .then((response) => response.json())
+  .then((categories) => {
+    console.log(categories);
 
-// fetch("http://localhost:5678/api/categories", {
-//   method: "GET",
-//   headers: {
-//     Accept: "application/json",
-//   },
-// })
-//   .then((response) => response.json())
-//   .then((categories) => {
-//     console.log(categories);
-
-//     categories.forEach((categorie) => {
-//       console.log(categorie);
-//       console.log(categorie.title);
-//     });
-//   });
+    categories.forEach((categorie) => {
+      console.log(categorie);
+      console.log(categorie.title);
+    });
+  });
