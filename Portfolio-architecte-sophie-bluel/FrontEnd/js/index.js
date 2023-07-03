@@ -48,8 +48,6 @@ fetch("http://localhost:5678/api/works", {
   .then((works) => {
     console.log(works);
 
-    gallery = document.querySelector(".gallery");
-    gallery.innerHTML = "";
     works.forEach((work) => {
       console.log(work);
       console.log(work.title);
@@ -57,10 +55,11 @@ fetch("http://localhost:5678/api/works", {
       let figureImg = document.createElement("img");
       figureImg.src = work.imageUrl;
       figureImg.alt = work.title;
-      figureFigcaption.appendChild;
+
       console.log(figureImg);
     });
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
+
     let figure = document.createElement("figure");
     // console.log(figure);
 
