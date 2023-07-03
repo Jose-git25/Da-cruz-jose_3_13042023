@@ -37,7 +37,7 @@ console.log("hello world");
 //     console.log("Erreur dans la récupération des données :", error);
 //   }
 // };
-
+let url = "http://localhost:5678/api/works";
 fetch("http://localhost:5678/api/works", {
   method: "GET",
   headers: {
@@ -48,6 +48,8 @@ fetch("http://localhost:5678/api/works", {
   .then((works) => {
     console.log(works);
 
+    let HTML = document.getElementById("works");
+    let myHTML = "";
     works.forEach((work) => {
       console.log(work);
       console.log(work.title);
@@ -66,6 +68,7 @@ fetch("http://localhost:5678/api/works", {
     figureImg.alt = "Appartement Paris V";
     // console.log(figureImg);
     figure.appendChild(figureImg);
+    HTML.appendChild(figureImg);
 
     let figureFigcaption = document.createElement("figcaption");
     figureFigcaption.textContent = "Appartement Paris V";
