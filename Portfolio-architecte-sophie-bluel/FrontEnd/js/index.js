@@ -48,8 +48,8 @@ fetch("http://localhost:5678/api/works", {
   .then((works) => {
     console.log(works);
 
-    let HTML = document.getElementById("works");
-    let myHTML = "";
+    gallery = document.querySelector(".gallery");
+    gallery.innerHTML = "";
     works.forEach((work) => {
       console.log(work);
       console.log(work.title);
@@ -57,6 +57,7 @@ fetch("http://localhost:5678/api/works", {
       let figureImg = document.createElement("img");
       figureImg.src = work.imageUrl;
       figureImg.alt = work.title;
+      figureFigcaption.appendChild;
       console.log(figureImg);
     });
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
@@ -68,7 +69,6 @@ fetch("http://localhost:5678/api/works", {
     figureImg.alt = "Appartement Paris V";
     // console.log(figureImg);
     figure.appendChild(figureImg);
-    HTML.appendChild(figureImg);
 
     let figureFigcaption = document.createElement("figcaption");
     figureFigcaption.textContent = "Appartement Paris V";
@@ -107,3 +107,20 @@ fetch("http://localhost:5678/api/categories", {
       // console.log(categorie.title);
     });
   });
+// function displayGallery(works) {
+//   gallery = document.querySelector(".gallery");
+//   gallery.innerHTML = "";
+
+//   works.forEach((work) => {
+//     const workCard = document.createElement("figure");
+//     const workImage = document.createElement("img");
+//     const workTitle = document.createElement("figcaption");
+//     workImage.src = work.imageUrl;
+//     workImage.alt = work.title;
+//     workTitle.innerText = work.title;
+//     workCard.dataset.category = work.category.name;
+//     workCard.className = "workCard";
+
+//     gallery.appendChild(workCard);
+//     workCard.append(workImage, workTitle);
+//   });
