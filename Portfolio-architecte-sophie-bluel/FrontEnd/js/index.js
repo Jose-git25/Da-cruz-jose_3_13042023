@@ -101,6 +101,6 @@ fetch("http://localhost:5678/api/categories", {
 
     categories.forEach((categorie) => {
       console.log(categorie);
-      console.log(categorie.title);
+      // console.log(categorie.title);
     });
   });

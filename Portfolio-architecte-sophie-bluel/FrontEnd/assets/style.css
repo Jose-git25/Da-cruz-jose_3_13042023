@@ -234,10 +234,10 @@ li:hover {
 
 #contact input,
 #login input {
-  height: 50px;
   font-size: 1.2em;
   border: none;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  margin-bottom: 30px;
 }
 #contact label {
   margin: 2em 0 1em 0;
@@ -247,6 +247,21 @@ li:hover {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
+#login {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#login h2 {
+  padding-bottom: 40px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
 input[type="submit"] {
   font-family: "Syne";
   font-weight: 700;
@@ -254,12 +269,31 @@ input[type="submit"] {
   background-color: #1d6154;
   margin: 2em auto;
   width: 180px;
+  height: 50px;
   text-align: center;
   border-radius: 60px;
+}
+#pass,
+#email {
+  width: 379px;
+  height: 51px;
+}
+h3 {
+  align-self: center;
+  color: #3d3d3d;
 }
 
 footer nav ul {
   display: flex;
   justify-content: flex-end;
   margin: 2em;
+}
+
+h4 {
+  display: flex;
+  flex-direction: row-reverse;
+  position: fixed;
+  bottom: 0; /* on le colle en bas */
+  left: 0;
+  width: 100%;
 }
