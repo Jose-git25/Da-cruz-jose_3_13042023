@@ -65,13 +65,12 @@ fetch("http://localhost:5678/api/works", {
       console.log(figureFigcaption);
     });
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
-    let gallery = document.getElementsByClassName("gallery");
+    let gallery = document.createElement("gallery");
     console.log(gallery);
-    // galleryfigure = document.createElement("figure");
 
     let figure = document.createElement("figure");
 
-    // console.log(figure);
+    console.log(figure);
 
     let figureImg = document.createElement("img");
     figureImg.src = "./assets/images/appartement-paris-v.png";
@@ -83,7 +82,6 @@ fetch("http://localhost:5678/api/works", {
     figureFigcaption.textContent = "Appartement Paris V";
 
     figure.appendChild(figureFigcaption);
-
     // console.log(figureFigcaption);
     // figureFigcaption;
 
