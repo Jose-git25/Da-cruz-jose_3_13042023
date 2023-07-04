@@ -42,6 +42,7 @@ fetch("http://localhost:5678/api/works", {
 
     figure.appendChild(figureFigcaption);
     gallery.appendChild(figure);
+    //
     //  HTML.appendChild(figure);
     //   let HTML = document.getElementById("gallery");
 
@@ -64,6 +65,7 @@ fetch("http://localhost:5678/api/works", {
     //   <figcaption>Appartement Paris V</figcaption>
     // </figure>;
   });
+
 fetch("http://localhost:5678/api/categories", {
   method: "GET",
   headers: {
@@ -79,6 +81,7 @@ fetch("http://localhost:5678/api/categories", {
       // console.log(categorie.title);
     });
   });
+
 // function displayGallery(works) {
 //   gallery = document.querySelector(".gallery");
 //   gallery.innerHTML = "";
