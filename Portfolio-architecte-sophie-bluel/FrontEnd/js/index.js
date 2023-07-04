@@ -37,6 +37,7 @@ console.log("hello world");
 //     console.log("Erreur dans la récupération des données :", error);
 //   }
 // };
+
 let url = "http://localhost:5678/api/works";
 fetch("http://localhost:5678/api/works", {
   method: "GET",
@@ -52,15 +53,17 @@ fetch("http://localhost:5678/api/works", {
       console.log(work);
       console.log(work.title);
 
+      let figure = document.createElement("figure");
       let figureImg = document.createElement("img");
       figureImg.src = work.imageUrl;
       figureImg.alt = work.title;
-
       console.log(figureImg);
+      figure.appendChild(figureImg);
     });
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
 
     let figure = document.createElement("figure");
+
     // console.log(figure);
 
     let figureImg = document.createElement("img");
