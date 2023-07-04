@@ -14,6 +14,7 @@ fetch("http://localhost:5678/api/works", {
     works.forEach((work) => {
       console.log(work);
       console.log(work.title);
+
       let figure = document.createElement("figure");
       let figureImg = document.createElement("img");
       figureImg.src = work.imageUrl;
@@ -42,6 +43,7 @@ fetch("http://localhost:5678/api/works", {
 
     figure.appendChild(figureFigcaption);
     gallery.appendChild(figure);
+
     //
     //  HTML.appendChild(figure);
     //   let HTML = document.getElementById("gallery");
