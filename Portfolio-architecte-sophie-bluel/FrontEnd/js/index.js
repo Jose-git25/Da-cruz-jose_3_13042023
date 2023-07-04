@@ -41,6 +41,7 @@ fetch("http://localhost:5678/api/works", {
     figureFigcaption.textContent = "Appartement Paris V";
 
     figure.appendChild(figureFigcaption);
+    gallery.appendChild(figure);
     //  HTML.appendChild(figure);
     //   let HTML = document.getElementById("gallery");
 
