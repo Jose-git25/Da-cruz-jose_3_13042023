@@ -65,12 +65,12 @@ fetch("http://localhost:5678/api/works", {
       console.log(figureFigcaption);
     });
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
-    let gallery = document.createElement("gallery");
+    let gallery = document.getElementsByClassName("gallery");
     console.log(gallery);
-    galleryfigure = document.createElement("figure");
+    // galleryfigure = document.createElement("figure");
 
     let figure = document.createElement("figure");
-    gallery.appendChild(figure);
+
     // console.log(figure);
 
     let figureImg = document.createElement("img");
@@ -87,7 +87,8 @@ fetch("http://localhost:5678/api/works", {
     // console.log(figureFigcaption);
     // figureFigcaption;
 
-    console.log(figure);
+    // console.log(figure);
+
     // figure = document.querySelector(figure);
     // let HTML = document.getElementById(figure);
     // let form = document.createElement("form");
