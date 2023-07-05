@@ -1,6 +1,6 @@
 console.log("hello world");
 
-let url = "http://localhost:5678/api/works";
+// let url = "http://localhost:5678/api/works";
 fetch("http://localhost:5678/api/works", {
   method: "GET",
   headers: {
@@ -10,12 +10,11 @@ fetch("http://localhost:5678/api/works", {
   .then((response) => response.json())
   .then((works) => {
     console.log(works);
-    let HTML = document.getElementsByClassName("gallery");
 
     works.forEach((work) => {
       console.log(work);
       console.log(work.title);
-
+      let HTML = document.getElementsByClassName(".gallery");
       let gallery = document.createElement("gallery");
       gallery = document.querySelector(".gallery");
       gallery.innerHTML = "";
@@ -23,7 +22,6 @@ fetch("http://localhost:5678/api/works", {
       const figureImg = document.createElement("img");
       figureImg.src = work.imageUrl;
       figureImg.alt = work.title;
-
       console.log(figureImg);
       figure.appendChild(figureImg);
       let figureFigcaption = document.createElement("figcaption");
@@ -97,19 +95,20 @@ fetch("http://localhost:5678/api/categories", {
   });
 
 // function displayGallery(works) {
-//   gallery = document.querySelector(".gallery");
-//   gallery.innerHTML = "";
+// gallery = document.querySelector(".gallery");
+// gallery.innerHTML = "";
 
-//   works.forEach((work) => {
-//     const workCard = document.createElement("figure");
-//     const workImage = document.createElement("img");
-//     const workTitle = document.createElement("figcaption");
-//     workImage.src = work.imageUrl;
-//     workImage.alt = work.title;
-//     workTitle.innerText = work.title;
-//     workCard.dataset.category = work.category.name;
-//     workCard.className = "workCard";
+// works.forEach((work) => {
+// const workCard = document.createElement("figure");
+// const workImage = document.createElement("img");
+// const workTitle = document.createElement("figcaption");
+// workImage.src = work.imageUrl;
+// workImage.alt = work.title;
+// workTitle.innerText = work.title;
+// workCard.dataset.category = work.category.name;
+// workCard.className = "workCard";
 
-//     gallery.appendChild(workCard);
-//     workCard.append(workImage, workTitle);
-//   });
+// gallery.appendChild(workCard);
+// workCard.append(workImage, workTitle);
+// });
+// }
