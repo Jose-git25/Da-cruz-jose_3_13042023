@@ -14,9 +14,13 @@ fetch("http://localhost:5678/api/works", {
     works.forEach((work) => {
       console.log(work);
       console.log(work.title);
-      // gallery = document.querySelector(".gallery");
+
       let gallery = document.createElement("gallery");
+      gallery = document.querySelector(".gallery");
+      gallery.innerHTML = "";
+      console.log(gallery);
       let figure = document.createElement("figure");
+
       let figureImg = document.createElement("img");
       figureImg.src = work.imageUrl;
       figureImg.alt = work.title;
@@ -25,15 +29,18 @@ fetch("http://localhost:5678/api/works", {
       let figureFigcaption = document.createElement("figcaption");
       figureFigcaption.title = work.title;
       console.log(figureFigcaption);
+
+      gallery.appendChild(figure);
     });
 
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
-    let HTML = document.getElementsByClassName("gallery");
+    const HTML = document.getElementsByClassName("gallery");
     let gallery = document.createElement("gallery");
     // console.log(gallery);
     gallery = document.querySelector(".gallery");
     // gallery.innerHTML = "";
     console.log(gallery);
+
     let figure = document.createElement("figure");
     // console.log(figure);
     let figureImg = document.createElement("img");
