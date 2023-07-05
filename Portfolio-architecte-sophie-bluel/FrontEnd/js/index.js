@@ -1,6 +1,7 @@
 console.log("hello world");
 
 // let url = "http://localhost:5678/api/works";
+
 fetch("http://localhost:5678/api/works", {
   method: "GET",
   headers: {
@@ -14,7 +15,9 @@ fetch("http://localhost:5678/api/works", {
     works.forEach((work) => {
       console.log(work);
       console.log(work.title);
+
       let HTML = document.getElementsByClassName(".gallery");
+
       let gallery = document.createElement("gallery");
       gallery = document.querySelector(".gallery");
       gallery.innerHTML = "";
@@ -75,7 +78,7 @@ fetch("http://localhost:5678/api/works", {
     //     alt="Appartement Paris V"
     //   />
     //   <figcaption>Appartement Paris V</figcaption>
-    // </figure>;
+    // </figure>;function displayGallery
   });
 
 fetch("http://localhost:5678/api/categories", {
