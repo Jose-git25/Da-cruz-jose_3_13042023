@@ -10,6 +10,7 @@ fetch("http://localhost:5678/api/works", {
   .then((response) => response.json())
   .then((works) => {
     console.log(works);
+    let HTML = document.getElementsByClassName("gallery");
 
     works.forEach((work) => {
       console.log(work);
@@ -18,7 +19,7 @@ fetch("http://localhost:5678/api/works", {
       let gallery = document.createElement("gallery");
       gallery = document.querySelector(".gallery");
       gallery.innerHTML = "";
-      console.log(gallery);
+
       let figure = document.createElement("figure");
 
       let figureImg = document.createElement("img");
@@ -29,17 +30,17 @@ fetch("http://localhost:5678/api/works", {
       let figureFigcaption = document.createElement("figcaption");
       figureFigcaption.title = work.title;
       console.log(figureFigcaption);
-
+      figure.appendChild(figureFigcaption);
       gallery.appendChild(figure);
+      console.log(gallery);
     });
 
     //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
-    const HTML = document.getElementsByClassName("gallery");
     let gallery = document.createElement("gallery");
     // console.log(gallery);
     gallery = document.querySelector(".gallery");
     // gallery.innerHTML = "";
-    console.log(gallery);
+    // console.log(gallery);
 
     let figure = document.createElement("figure");
     // console.log(figure);
