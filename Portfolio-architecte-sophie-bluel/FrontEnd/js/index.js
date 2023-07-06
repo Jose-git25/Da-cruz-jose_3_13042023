@@ -16,13 +16,13 @@ fetch("http://localhost:5678/api/works", {
       console.log(work);
       console.log(work.title);
 
-      let HTML = document.getElementsByClassName(".gallery");
+      // let HTML = document.getElementsByClassName(".gallery");
 
       let gallery = document.createElement("gallery");
       gallery = document.querySelector(".gallery");
       gallery.innerHTML = "";
-      const figure = document.createElement("figure");
-      const figureImg = document.createElement("img");
+      let figure = document.createElement("figure");
+      let figureImg = document.createElement("img");
       figureImg.src = work.imageUrl;
       figureImg.alt = work.title;
       console.log(figureImg);
