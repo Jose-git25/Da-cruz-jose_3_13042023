@@ -16,7 +16,7 @@ fetch("http://localhost:5678/api/works", {
       console.log(work);
       console.log(work.title);
 
-      let HTML = document.getElementsByClassName(".gallery");
+      // let HTML = document.getElementsByClassName(".gallery");
 
       let gallery = document.createElement("gallery");
       gallery = document.querySelector(".gallery");
@@ -33,6 +33,7 @@ fetch("http://localhost:5678/api/works", {
       figureFigcaption.textContent = work.title;
       console.log(figureFigcaption);
       figure.appendChild(figureFigcaption);
+
       gallery.appendChild(figure);
       console.log(gallery);
     });
