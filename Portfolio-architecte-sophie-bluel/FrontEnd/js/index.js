@@ -101,22 +101,3 @@ fetch("http://localhost:5678/api/categories", {
       // console.log(categorie.title);
     });
   });
-
-// function displayGallery(works) {
-// gallery = document.querySelector(".gallery");
-// gallery.innerHTML = "";
-
-// works.forEach((work) => {
-// const workCard = document.createElement("figure");
-// const workImage = document.createElement("img");
-// const workTitle = document.createElement("figcaption");
-// workImage.src = work.imageUrl;
-// workImage.alt = work.title;
-// workTitle.innerText = work.title;
-// workCard.dataset.category = work.category.name;
-// workCard.className = "workCard";
-
-// gallery.appendChild(workCard);
-// workCard.append(workImage, workTitle);
-// });
-// }
