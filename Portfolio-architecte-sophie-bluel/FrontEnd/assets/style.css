@@ -298,3 +298,6 @@ h4 {
   left: 0;
   width: 100%;
 }
+h3 {
+  text-decoration: underline;
+}

@@ -12,15 +12,16 @@ fetch("http://localhost:5678/api/works", {
   .then((works) => {
     console.log(works);
 
+    let gallery = document.querySelector(".gallery");
+    // gallery.innerHTML = "";/vider html/
+
     works.forEach((work) => {
       console.log(work);
       console.log(work.title);
 
       // let HTML = document.getElementsByClassName(".gallery");
 
-      let gallery = document.createElement("gallery");
-      gallery = document.querySelector(".gallery");
-      gallery.innerHTML = "";
+      // let gallery = document.createElement("gallery");
 
       let figure = document.createElement("figure");
       let figureImg = document.createElement("img");
@@ -38,28 +39,28 @@ fetch("http://localhost:5678/api/works", {
       console.log(gallery);
     });
 
-    //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
-    let gallery = document.createElement("gallery");
-    // console.log(gallery);
-    gallery = document.querySelector(".gallery");
-    // gallery.innerHTML = "";
-    // console.log(gallery);
+    // //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
+    // let gallery = document.createElement("gallery");
+    // // console.log(gallery);
+    // gallery = document.querySelector(".gallery");
+    // // gallery.innerHTML = "";
+    // // console.log(gallery);
 
-    let figure = document.createElement("figure");
-    // console.log(figure);
-    let figureImg = document.createElement("img");
-    figureImg.src = "./assets/images/appartement-paris-v.png";
-    figureImg.alt = "Appartement Paris V";
+    // let figure = document.createElement("figure");
+    // // console.log(figure);
+    // let figureImg = document.createElement("img");
+    // figureImg.src = "./assets/images/appartement-paris-v.png";
+    // figureImg.alt = "Appartement Paris V";
 
-    console.log(figureImg);
-    figure.appendChild(figureImg);
+    // console.log(figureImg);
+    // figure.appendChild(figureImg);
 
-    let figureFigcaption = document.createElement("figcaption");
-    figureFigcaption.textContent = "Appartement Paris V";
+    // let figureFigcaption = document.createElement("figcaption");
+    // figureFigcaption.textContent = "Appartement Paris V";
 
-    figure.appendChild(figureFigcaption);
+    // figure.appendChild(figureFigcaption);
 
-    gallery.appendChild(figure);
+    // gallery.appendChild(figure);
 
     //
     //  HTML.appendChild(figure);
