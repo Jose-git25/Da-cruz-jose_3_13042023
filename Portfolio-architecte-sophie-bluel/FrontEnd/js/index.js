@@ -16,19 +16,21 @@ fetch("http://localhost:5678/api/works", {
       console.log(work);
       console.log(work.title);
 
-      // let HTML = document.getElementsByClassName(".gallery");
+      let HTML = document.getElementsByClassName(".gallery");
 
       let gallery = document.createElement("gallery");
       gallery = document.querySelector(".gallery");
       gallery.innerHTML = "";
+
       let figure = document.createElement("figure");
       let figureImg = document.createElement("img");
       figureImg.src = work.imageUrl;
       figureImg.alt = work.title;
       console.log(figureImg);
       figure.appendChild(figureImg);
+
       let figureFigcaption = document.createElement("figcaption");
-      figureFigcaption.title = work.title;
+      figureFigcaption.textContent = work.title;
       console.log(figureFigcaption);
       figure.appendChild(figureFigcaption);
       gallery.appendChild(figure);
@@ -47,6 +49,7 @@ fetch("http://localhost:5678/api/works", {
     let figureImg = document.createElement("img");
     figureImg.src = "./assets/images/appartement-paris-v.png";
     figureImg.alt = "Appartement Paris V";
+
     console.log(figureImg);
     figure.appendChild(figureImg);
 
