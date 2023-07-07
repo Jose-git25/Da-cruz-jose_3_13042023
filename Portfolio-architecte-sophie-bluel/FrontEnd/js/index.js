@@ -40,50 +40,6 @@ fetch("http://localhost:5678/api/works", {
     });
 
     // //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
-    // let gallery = document.createElement("gallery");
-    // // console.log(gallery);
-    // gallery = document.querySelector(".gallery");
-    // // gallery.innerHTML = "";
-    // // console.log(gallery);
-
-    // let figure = document.createElement("figure");
-    // // console.log(figure);
-    // let figureImg = document.createElement("img");
-    // figureImg.src = "./assets/images/appartement-paris-v.png";
-    // figureImg.alt = "Appartement Paris V";
-
-    // console.log(figureImg);
-    // figure.appendChild(figureImg);
-
-    // let figureFigcaption = document.createElement("figcaption");
-    // figureFigcaption.textContent = "Appartement Paris V";
-
-    // figure.appendChild(figureFigcaption);
-
-    // gallery.appendChild(figure);
-
-    //
-    //  HTML.appendChild(figure);
-    //   let HTML = document.getElementById("gallery");
-
-    // console.log(gallery);
-    // console.log(figureFigcaption);
-    // figureFigcaption;
-
-    // console.log(figure);
-
-    // figure = document.querySelector(figure);
-    // let HTML = document.getElementById(figure);
-    // let form = document.createElement("form");
-    // console.log(form);
-
-    // <figure>
-    //   <img
-    //     src=assets/images/appartement-paris-v.png
-    //     alt="Appartement Paris V"
-    //   />
-    //   <figcaption>Appartement Paris V</figcaption>
-    // </figure>;
   });
 
 fetch("http://localhost:5678/api/categories", {
@@ -98,6 +54,7 @@ fetch("http://localhost:5678/api/categories", {
 
     categories.forEach((categorie) => {
       console.log(categorie);
+
       // console.log(categorie.title);
     });
   });
