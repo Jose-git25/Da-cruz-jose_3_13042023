@@ -83,7 +83,7 @@ fetch("http://localhost:5678/api/works", {
     //     alt="Appartement Paris V"
     //   />
     //   <figcaption>Appartement Paris V</figcaption>
-    // </figure>;function displayGallery
+    // </figure>;
   });
 
 fetch("http://localhost:5678/api/categories", {
