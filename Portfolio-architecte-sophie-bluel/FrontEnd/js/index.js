@@ -54,5 +54,6 @@ fetch("http://localhost:5678/api/categories", {
 
     categories.forEach((categorie) => {
       console.log(categorie);
+      let nouvelleDiv = document.createElement("div id filtres");
     });
   });
