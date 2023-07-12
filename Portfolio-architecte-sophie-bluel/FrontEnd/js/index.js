@@ -57,11 +57,12 @@ fetch("http://localhost:5678/api/categories", {
       console.log(categorie.name);
 
       let button = document.createElement("button");
-      button.type = "submit";
-      button.value = categorie.name;
+      button.type = "button";
+      button.textContent = categorie.name;
+
       portfolio.appendChild(button);
 
-      console.log(button);
+      console.log(portfolio);
     });
     // Set.forEach = "Objets,Appartements,Hotels & restaurants";
   });
