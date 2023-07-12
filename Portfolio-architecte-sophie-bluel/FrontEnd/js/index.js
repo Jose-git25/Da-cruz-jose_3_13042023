@@ -55,13 +55,14 @@ fetch("http://localhost:5678/api/categories", {
     categories.forEach((categorie) => {
       console.log(categorie);
       console.log(categorie.name);
-      // let nouvelleDiv = document.createElement("div");
+      let nouvelleDiv = document.createElement("div");
       // div = document.createElement("Filtres");
-      div = document.createElement("button");
+      // div = document.createElement("button");
+
       let button = document.createElement("button");
       button.type = "button";
       button.textContent = categorie.name;
-
+      // button.push("Tous");
       Filtres.appendChild(button);
 
       console.log(Filtres);
