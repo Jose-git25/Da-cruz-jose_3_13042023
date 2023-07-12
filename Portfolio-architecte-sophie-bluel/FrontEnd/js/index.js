@@ -55,6 +55,4 @@ fetch("http://localhost:5678/api/categories", {
     categories.forEach((categorie) => {
       console.log(categorie);
     });
-    // let filtres = document.querySelector(".filtres");
-    // categories.SetAttribute(div, filtres);
   });
