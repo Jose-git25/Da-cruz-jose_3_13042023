@@ -56,15 +56,14 @@ fetch("http://localhost:5678/api/categories", {
       console.log(categorie);
       console.log(categorie.name);
       // let nouvelleDiv = document.createElement("div");
-      // div = document.createElement("filtres");
+      // div = document.createElement("Filtres");
       div = document.createElement("button");
       let button = document.createElement("button");
       button.type = "button";
       button.textContent = categorie.name;
 
-      portfolio.appendChild(button);
+      Filtres.appendChild(button);
 
-      console.log(portfolio);
+      console.log(Filtres);
     });
-    // Set.forEach = "Objets,Appartements,Hotels & restaurants";
   });
