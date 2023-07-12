@@ -55,8 +55,8 @@ fetch("http://localhost:5678/api/categories", {
     categories.forEach((categorie) => {
       console.log(categorie);
       console.log(categorie.name);
-      let nouvelleDiv = document.createElement("div");
-      div = document.createElement("filtres");
+      // let nouvelleDiv = document.createElement("div");
+      // div = document.createElement("filtres");
       div = document.createElement("button");
       let button = document.createElement("button");
       button.type = "button";
