@@ -58,5 +58,8 @@ fetch("http://localhost:5678/api/categories", {
     // Set.forEach = "Objets,Appartements,Hotels & restaurants";
 
     // let nouvelleDiv = document.createElement("div ");
-    // let button = document.createElement("button");
+    let button = document.createElement("button");
+    button.value = categories;
+
+    button.appendChild;
   });
