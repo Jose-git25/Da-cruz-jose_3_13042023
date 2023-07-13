@@ -69,9 +69,10 @@ fetch("http://localhost:5678/api/categories", {
       Filtres.appendChild(button);
 
       console.log(Filtres);
+      // button.setAttribute(background, green);
       // button.addEventListener;
       // if (click) {
-      //   button.stylecss.background, green;
+      //   button.stylecss.;
       // }
 
       // )
