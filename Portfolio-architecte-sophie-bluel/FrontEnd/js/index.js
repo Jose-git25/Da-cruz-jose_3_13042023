@@ -1,82 +1,118 @@
+async function getWorks() {
+  try {
+    const response = await fetch("http://localhost:5678/api/works");
+    const data = response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function getCategories() {
+  try {
+    const response = await fetch("http://localhost:5678/api/categories");
+    const data = response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function init() {
+  const works = await getWorks();
+  const allCat = { id: 0, name: "Tous" };
+  const categories = await getCategories();
+  categories.unshift(allCat);
+  console.log(works, categories);
+  createWorks(works);
+  createCategories(categories);
+}
+
+init();
+
+function createWorks(works) {
+  let gallery = document.querySelector(".gallery");
+
+  works.forEach((work) => {
+    let figure = document.createElement("figure");
+    let figureImg = document.createElement("img");
+    figureImg.src = work.imageUrl;
+    figureImg.alt = work.title;
+    figure.appendChild(figureImg);
+
+    let figureFigcaption = document.createElement("figcaption");
+    figureFigcaption.textContent = work.title;
+    figure.appendChild(figureFigcaption);
+
+    gallery.appendChild(figure);
+  });
+}
+
+function createCategories(categories) {
+  categories.forEach((categorie) => {
+    let nouvelleDiv = document.createElement("div");
+
+    let button = document.createElement("button");
+    button.type = "button";
+    button.textContent = categorie.name;
+
+    Filtres.appendChild(button);
+  });
+}
+
 console.log("hello world");
 
 // let url = "http://localhost:5678/api/works";
 
-fetch("http://localhost:5678/api/works", {
-  method: "GET",
-  headers: {
-    Accept: "application/json",
-  },
-})
-  .then((response) => response.json())
-  .then((works) => {
-    console.log(works);
+// fetch("http://localhost:5678/api/works", {
+//   method: "GET",
+//   headers: {
+//     Accept: "application/json",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((works) => {
+//     // console.log(works);
+//     // //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
+//   });
 
-    let gallery = document.querySelector(".gallery");
-    // gallery.innerHTML = "";/vider html/
+// fetch("http://localhost:5678/api/categories", {
+//   method: "GET",
+//   headers: {
+//     Accept: "application/json",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((categories) => {
+//     // console.log(categories);
 
-    works.forEach((work) => {
-      console.log(work);
-      console.log(work.title);
+//     let button = document.createElement("button");
+//     button.type = "button";
+//     button.textContent = "Tous";
+//     Filtres.appendChild(button);
 
-      // let HTML = document.getElementsByClassName(".gallery");
+//     categories.forEach((categorie) => {
+//       // console.log(categorie);
+//       // console.log(categorie.name);
+//       let nouvelleDiv = document.createElement("div");
+//       // div = document.createElement("Filtres");
+//       // div = document.createElement("button");
 
-      // let gallery = document.createElement("gallery");
+//       let button = document.createElement("button");
+//       button.type = "button";
+//       button.textContent = categorie.name;
+//       // button.push("Tous");
+//       Filtres.appendChild(button);
 
-      let figure = document.createElement("figure");
-      let figureImg = document.createElement("img");
-      figureImg.src = work.imageUrl;
-      figureImg.alt = work.title;
-      console.log(figureImg);
-      figure.appendChild(figureImg);
+//       // console.log(Filtres);
+//       // button.setAttribute(background, green);
+//       //  button.addEventListener;
+//       //  if (click) {
+//       //    button.style.backgroundColor=green;
+//       //  }
 
-      let figureFigcaption = document.createElement("figcaption");
-      figureFigcaption.textContent = work.title;
-      console.log(figureFigcaption);
-      figure.appendChild(figureFigcaption);
-
-      gallery.appendChild(figure);
-      console.log(gallery);
-    });
-
-    // //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
-  });
-let button = document.createElement("button");
-button.type = "button";
-button.textContent = "Tous";
-Filtres.appendChild(button);
-fetch("http://localhost:5678/api/categories", {
-  method: "GET",
-  headers: {
-    Accept: "application/json",
-  },
-})
-  .then((response) => response.json())
-  .then((categories) => {
-    console.log(categories);
-
-    categories.forEach((categorie) => {
-      console.log(categorie);
-      console.log(categorie.name);
-      let nouvelleDiv = document.createElement("div");
-      // div = document.createElement("Filtres");
-      // div = document.createElement("button");
-
-      let button = document.createElement("button");
-      button.type = "button";
-      button.textContent = categorie.name;
-      // button.push("Tous");
-      Filtres.appendChild(button);
-
-      console.log(Filtres);
-      // button.setAttribute(background, green);
-      //  button.addEventListener;
-      //  if (click) {
-      //    button.style.backgroundColor=green;
-      //  }
-
-      //  )
-      //  }
-      // });
-    });
-  });
+//       //  )
+//       //  }
+//       // });
+//     });
+//   });
