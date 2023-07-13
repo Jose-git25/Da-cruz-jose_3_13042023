@@ -66,5 +66,9 @@ fetch("http://localhost:5678/api/categories", {
       Filtres.appendChild(button);
 
       console.log(Filtres);
+      //    button.addEventListener(click,
+      //      button.stylecss.background,green)
+      //    }
+      //  });
     });
   });
