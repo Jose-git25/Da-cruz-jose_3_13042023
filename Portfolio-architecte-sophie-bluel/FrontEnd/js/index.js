@@ -70,13 +70,13 @@ fetch("http://localhost:5678/api/categories", {
 
       console.log(Filtres);
       // button.setAttribute(background, green);
-      // button.addEventListener;
-      // if (click) {
-      //   button.stylecss.;
-      // }
-
-      // )
+      //  button.addEventListener;
+      //  if (click) {
+      //    button.style.backgroundColor=green;
       //  }
-      //  });
+
+      //  )
+      //  }
+      // });
     });
   });
