@@ -41,7 +41,10 @@ fetch("http://localhost:5678/api/works", {
 
     // //Le code pour afficher les works dans le HTML avec des CreateElement pour créer e  HTML
   });
-
+let button = document.createElement("button");
+button.type = "button";
+button.textContent = "Tous";
+Filtres.appendChild(button);
 fetch("http://localhost:5678/api/categories", {
   method: "GET",
   headers: {
@@ -66,9 +69,13 @@ fetch("http://localhost:5678/api/categories", {
       Filtres.appendChild(button);
 
       console.log(Filtres);
-      //    button.addEventListener(click,
-      //      button.stylecss.background,green)
-      //    }
+      // button.addEventListener;
+      // if (click) {
+      //   button.stylecss.background, green;
+      // }
+
+      // )
+      //  }
       //  });
     });
   });
