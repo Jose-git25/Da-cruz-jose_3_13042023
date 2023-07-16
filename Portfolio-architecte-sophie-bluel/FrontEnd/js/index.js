@@ -61,6 +61,12 @@ function createCategories(categories) {
 }
 
 console.log("hello world");
+functionUserActivation();
+{
+  let name = getElementbyId(name);
+  {
+  }
+}
 
 // let url = "http://localhost:5678/api/works";
 
