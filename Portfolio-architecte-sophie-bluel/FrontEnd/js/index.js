@@ -60,24 +60,25 @@ function createCategories(categories) {
   });
 }
 let userslogin = { name: "Sophie", surname: "bluel" };
+console.log(userslogin);
+fetch("http://localhost:5678/api/users/login"), {};
 
-fetch("http://localhost:5678/api/users/login");
-{
-  method: "POST", headers;
+then((response) => response.json()).then(users / login);
+//  {
+//   method: "POST", headers;
 
-  {
-    Accept: "application/json", Content - Type;
-    application / json;
-    {
-      email: "string", password;
-      "string", headers;
-      JSON.stringify(user);
-    }
-  }
-}
-then((response) => response.json()).then(login);
-then(users / login);
-console.log(users / login);
+//   {
+//     "Accept: Content - Type", "application/json";
+//     application / json;
+//   }
+//   {
+//     email: "sophie.bluel@test.tld", password;
+//     ("S0phie");
+//   }
+// }
+// then((response) => response.json()).then(login);
+// then(users / login);
+// console.log(users / login);
 // filter(works, categories);
 // let url = "http://localhost:5678/api/works";
 
