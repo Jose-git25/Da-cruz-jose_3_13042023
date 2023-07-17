@@ -59,7 +59,22 @@ function createCategories(categories) {
     Filtres.appendChild(button);
   });
 }
+fetch("http://localhost:5678/api/users/login");
+{
+  method: "GET", headers;
 
+  {
+    Accept: "application/json",
+      {
+        email: "string",
+        password: "string",
+      };
+  }
+}
+then((response) => response.json()).then(login);
+then(users / login);
+console.log(users / login);
+// filter(works, categories);
 // let url = "http://localhost:5678/api/works";
 
 // fetch("http://localhost:5678/api/works", {
