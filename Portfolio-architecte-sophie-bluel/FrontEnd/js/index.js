@@ -59,26 +59,25 @@ function createCategories(categories) {
     Filtres.appendChild(button);
   });
 }
-let userslogin = { name: "Sophie", surname: "bluel" };
-console.log(userslogin);
-fetch("http://localhost:5678/api/users/login"), {};
-
-then((response) => response.json()).then(users / login);
-//  {
-//   method: "POST", headers;
-
-//   {
-//     "Accept: Content - Type", "application/json";
-//     application / json;
-//   }
-//   {
-//     email: "sophie.bluel@test.tld", password;
-//     ("S0phie");
-//   }
+// let userslogin = { name: "Sophie", surname: "bluel" };
+// console.log(userslogin);
+// const userslogin= fetch("http://localhost:5678/api/users/login").then((response) =>
+//   response.json().then(userslogin)
+// );
+// {
+//   console.log(userslogin);
 // }
-// then((response) => response.json()).then(login);
-// then(users / login);
-// console.log(users / login);
+// {   method: "POST",
+//   headers: {
+//      Accept: "application/json",
+//    },
+//  };
+//
+//   .then((userslogin) => {
+// //     // console.log(userslogin);};
+
+//  then((response) => response.json()).then(users / login) =>{console.log(userslogin);}
+//
 // filter(works, categories);
 // let url = "http://localhost:5678/api/works";
 
