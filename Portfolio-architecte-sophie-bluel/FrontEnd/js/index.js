@@ -61,12 +61,16 @@ function createCategories(categories) {
 }
 
 console.log("hello world");
-functionUserActivation();
-{
-  let name = getElementbyId(name);
-  {
-  }
+function UserActivation();{
+
 }
+fetch("http://localhost:5678/api/users/login");
+method:Post;{}
+// functionUserActivation();
+// {
+//   let name = getElementbyId(name).value;
+//   let email = getElementbyId(email).value;
+// }
 
 // let url = "http://localhost:5678/api/works";
 
