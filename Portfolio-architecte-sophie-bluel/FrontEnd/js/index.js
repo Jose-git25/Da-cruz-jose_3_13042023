@@ -60,18 +60,12 @@ function createCategories(categories) {
   });
 }
 
-console.log("hello world");
-function UserActivation();{
+let user = {
+  name: "Sophie",
+  surname: "Bluel",
+};
 
-}
-fetch("http://localhost:5678/api/users/login");
-method:Post;{}
-// functionUserActivation();
-// {
-//   let name = getElementbyId(name).value;
-//   let email = getElementbyId(email).value;
-// }
-
+// console.log(user);
 // let url = "http://localhost:5678/api/works";
 
 // fetch("http://localhost:5678/api/works", {
