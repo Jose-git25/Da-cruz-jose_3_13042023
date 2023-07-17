@@ -60,12 +60,6 @@ function createCategories(categories) {
   });
 }
 
-let user = {
-  name: "Sophie",
-  surname: "Bluel",
-};
-
-// console.log(user);
 // let url = "http://localhost:5678/api/works";
 
 // fetch("http://localhost:5678/api/works", {
