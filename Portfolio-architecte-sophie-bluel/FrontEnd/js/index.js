@@ -59,16 +59,20 @@ function createCategories(categories) {
     Filtres.appendChild(button);
   });
 }
+let userslogin = { name: "Sophie", surname: "bluel" };
+
 fetch("http://localhost:5678/api/users/login");
 {
-  method: "GET", headers;
+  method: "POST", headers;
 
   {
-    Accept: "application/json",
-      {
-        email: "string",
-        password: "string",
-      };
+    Accept: "application/json", Content - Type;
+    application / json;
+    {
+      email: "string", password;
+      "string", headers;
+      JSON.stringify(user);
+    }
   }
 }
 then((response) => response.json()).then(login);
