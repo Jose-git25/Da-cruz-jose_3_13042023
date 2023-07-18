@@ -61,8 +61,13 @@ function createCategories(categories) {
 }
 // let userslogin = { name: "Sophie", surname: "bluel" };
 // console.log(userslogin);
-const userslogin = fetch("http://localhost:5678/api/users/login");
-console.log(userslogin);
+const userslogin = fetch("http://localhost:5678/api/users/login", {
+  method: "POST",
+  headers: {
+    "accept: application/json": "Content-Type:application/json",
+  },
+});
+then((response) => response.json());
 
 // .then((response) =>
 //   response.json().then(userslogin)
@@ -81,7 +86,7 @@ console.log(userslogin);
 
 //  then((response) => response.json()).then(users / login) =>{console.log(userslogin);}
 //
-// filter(works, categories);
+
 // let url = "http://localhost:5678/api/works";
 
 // fetch("http://localhost:5678/api/works", {
