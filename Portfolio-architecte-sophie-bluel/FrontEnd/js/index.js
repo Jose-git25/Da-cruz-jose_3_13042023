@@ -61,14 +61,18 @@ function createCategories(categories) {
 }
 // let userslogin = { name: "Sophie", surname: "bluel" };
 // console.log(userslogin);
-const userslogin = fetch("http://localhost:5678/api/users/login", {
+
+let userslogin = fetch("http://localhost:5678/api/post_users/login", {
   method: "POST",
   headers: {
     "accept: application/json": "Content-Type:application/json",
   },
-});
-then((response) => response.json());
-
+})
+  .then((response) => response.json())
+  .then(userslogin);
+{
+  console.log(userslogin);
+}
 // .then((response) =>
 //   response.json().then(userslogin)
 // );
