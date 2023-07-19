@@ -59,6 +59,11 @@ function createCategories(categories) {
     Filtres.appendChild(button);
   });
 }
+
+// let button = document.querySelectorAll("button");
+// button.AddEventListener("click", () => {
+//   button.stylebackgroundColor = green;
+// });
 // let userslogin = { name: "Sophie", surname: "bluel" };
 // console.log(userslogin);
 

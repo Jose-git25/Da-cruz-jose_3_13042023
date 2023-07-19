@@ -301,3 +301,11 @@ h4 {
 h3 {
   text-decoration: underline;
 }
+#Filtres {
+  display: flex;
+  flex-direction: row;
+}
+#Filtres button {
+  border-radius: 60px;
+  width: 137px;
+}
