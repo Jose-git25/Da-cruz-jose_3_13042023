@@ -59,15 +59,15 @@ function createCategories(categories) {
     Filtres.appendChild(button);
   });
 }
-function filter(button) {
-  button.addEventlistener("click", function () {
-    const filtredItems = data.filter((item) => {
-      return item.category.name === button.innerText;
-    });
-    document.querySelector(".gallery").innerHTML = "";
-    generateGallery(filtredItems);
-  });
-}
+// function filter(button) {
+//   button.addEventlistener("click", function () {
+//     const filtredItems = data.filter((item) => {
+//       return item.category.name === button.innerText;
+//     });
+//     document.querySelector(".gallery").innerHTML = "";
+//     generateGallery(filtredItems);
+//   });
+// }
 
 // let button = document.querySelectorAll("button");
 // button.AddEventListener("click", () => {
