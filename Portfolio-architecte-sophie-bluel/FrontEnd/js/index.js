@@ -25,13 +25,14 @@ async function init() {
   categories.unshift(allCat);
   console.log(works, categories);
   createWorks(works);
-  createCategories(categories);
+  createCategories(categories, works);
 }
 
 init();
 
 function createWorks(works) {
   let gallery = document.querySelector(".gallery");
+  gallery.innerHTML = "";
 
   works.forEach((work) => {
     let figure = document.createElement("figure");
@@ -48,7 +49,7 @@ function createWorks(works) {
   });
 }
 
-function createCategories(categories) {
+function createCategories(categories, works) {
   categories.forEach((categorie) => {
     let nouvelleDiv = document.createElement("div");
 
@@ -56,19 +57,31 @@ function createCategories(categories) {
     button.type = "button";
     button.textContent = categorie.name;
 
+    if ("Tous" == categorie.name) {
+      button.className = "filter_active";
+    }
+
+    filter(button, works);
+
     Filtres.appendChild(button);
   });
 }
-// function filter(button) {
-//   button.addEventlistener("click", function () {
-//     const filtredItems = data.filter((item) => {
-//       return item.category.name === button.innerText;
-//     });
-//     document.querySelector(".gallery").innerHTML = "";
-//     generateGallery(filtredItems);
-//   });
-// }
 
+function filter(button, works) {
+  button.addEventListener("click", function () {
+    console.log(this.textContent);
+    let filtredItems = works.filter((item) => {
+      return item.category.name === this.textContent;
+    });
+    if ("Tous" == this.textContent) {
+      filtredItems = works;
+      console.log("Ok");
+    }
+    createWorks(filtredItems);
+
+    // Gérerle le déplacement de la class filter_active
+  });
+}
 // let button = document.querySelectorAll("button");
 // button.AddEventListener("click", () => {
 //   button.stylebackgroundColor = green;

@@ -309,3 +309,7 @@ h3 {
   border-radius: 60px;
   width: 137px;
 }
+
+.filter_active {
+  background-color: #1d6154;
+}
