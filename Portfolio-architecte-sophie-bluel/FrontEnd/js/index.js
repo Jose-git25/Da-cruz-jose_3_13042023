@@ -82,12 +82,9 @@ function filter(button, works) {
     // Gérerle le déplacement de la class filter_active
   });
 }
-// let button = document.querySelectorAll("button");
-// button.AddEventListener("click", () => {
-//   button.stylebackgroundColor = green;
-// });
-// let userslogin = { name: "Sophie", surname: "bluel" };
-// console.log(userslogin);
+
+// const form= document query selector("form");
+// form.addEventlistener
 
 //
 // .then((response) =>
@@ -99,6 +96,7 @@ function filter(button, works) {
 // {   method: "POST",
 //   headers: {
 //      Accept: "application/json",
+// declare
 //    },
 //  };
 //
