@@ -83,8 +83,42 @@ function filter(button, works) {
   });
 }
 
-// const form= document query selector("form");
-// form.addEventlistener
+ const form = document.queryselector("form");
+ form.addEventlistener("submit", function (event) {
+   event.preventDefault();
+ let emailValue = document.getElementById("#email").Value;
+  let password = document.getElementById("#pass").Value;
+   fetch("http://localhost:5678/api/users/login", {
+     method: "POST",
+     headers: {
+       Accept: "application/json",
+     },
+     body: JSON.stringify({
+       email: emailValue,
+       password: passwordValue,
+     }),
+   });
+   });
+  then(response);
+  if (response.ok) {
+   return json()
+   .then login =>{
+     localStorage.setItem ("mon_token,token");
+  window.location.href = "./index.html"};}
+
+   else (throw newError){
+    ("Erreur dans l'identifiant ou le mot de passe");
+  }
+
+ then(data);
+ {
+   console.log(data);
+
+   localStorage.setItem("mon_token,token");
+ }
+  // )}
+//  }
+//  });
 
 //
 // .then((response) =>
@@ -134,26 +168,6 @@ function filter(button, works) {
 //     button.type = "button";
 //     button.textContent = "Tous";
 //     Filtres.appendChild(button);
-
-//     categories.forEach((categorie) => {
-//       // console.log(categorie);
-//       // console.log(categorie.name);
-//       let nouvelleDiv = document.createElement("div");
-//       // div = document.createElement("Filtres");
-//       // div = document.createElement("button");
-
-//       let button = document.createElement("button");
-//       button.type = "button";
-//       button.textContent = categorie.name;
-//       // button.push("Tous");
-//       Filtres.appendChild(button);
-
-//       // console.log(Filtres);
-//       // button.setAttribute(background, green);
-//       //  button.addEventListener;
-//       //  if (click) {
-//       //    button.style.backgroundColor=green;
-//       //  }
 
 //       //  )
 //       //  }
