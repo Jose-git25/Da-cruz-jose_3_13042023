@@ -80,5 +80,24 @@ function filter(button, works) {
     createWorks(filtredItems);
 
     // Gérerle le déplacement de la class filter_active
+
+    if ("Appartements" == this.textContent) {
+      button.className = "filter_active";
+      filter(button, works);
+
+      Filtres.appendChild(button);
+    }
+    if ("Objets" == this.textContent) {
+      button.className = "filter_active";
+      filter(button, works);
+
+      Filtres.appendChild(button);
+    }
+    if ("Hotels & restaurants" == this.textContent) {
+      button.className = "filter_active";
+      filter(button, works);
+
+      Filtres.appendChild(button);
+    }
   });
 }
