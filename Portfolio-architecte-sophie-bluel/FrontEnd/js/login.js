@@ -3,34 +3,38 @@ let form = document.querySelector("form");
 let label = document.querySelector("label");
 // console.log(form);
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  console.log("ok");
-  let emailValue = document.getElementById("email").value;
-  let passValue = document.getElementById("pass").value;
+form
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("ok");
+    let emailValue = document.getElementById("email").value;
+    let passValue = document.getElementById("pass").value;
 
-  const data = {
-    email: emailValue,
-    password: passValue,
-  };
-  console.log(data);
-  //Fetch méthode ICI
-  fetch("http://localhost:5678/api/users/login", {
-    method: "POST",
-    headers: {
-      accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
-    .then((data) => data.json())
-    .then((response) => {
-      console.log(response);
+    const data = {
+      email: emailValue,
+      password: passValue,
+    };
+    console.log(data);
+    //Fetch méthode ICI
+    fetch("http://localhost:5678/api/users/login", {
+      method: "POST",
+      headers: {
+        accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
     })
-    .catch((error) => {
-      console.log(error);
-    });
-});
+      .then((data) => data.json())
+      .then((response) => {
+        console.log(response);
+        localStorage.setItem("token", data);
+        window.location.href = "./index.html";
+        console.log(token);
+      });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
 // fetch(
 //   "http://localhost:5678/api/users/login",
