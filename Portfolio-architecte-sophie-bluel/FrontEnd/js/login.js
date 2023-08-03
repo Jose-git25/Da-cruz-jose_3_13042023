@@ -26,14 +26,17 @@ form.addEventListener("submit", function (event) {
     .then((data) => data.json())
     .then((response) => {
       console.log(response);
-      localStorage.setItem("token", data);
-      window.location.href = "./index.html";
-      console.log(token);
+      if (!response.error) {
+        localStorage.setItem("token", response.token);
+        window.location.href = "./index.html";
+      } else {
+        console.log("erreur email / mdp");
+      }
     })
     .catch((error) => {
       console.log(error);
     });
-  // });
+  //  });
 
   // fetch(
   //   "http://localhost:5678/api/users/login",

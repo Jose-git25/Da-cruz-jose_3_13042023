@@ -80,24 +80,39 @@ function filter(button, works) {
     createWorks(filtredItems);
 
     // Gérerle le déplacement de la class filter_active
+    document.querySelector(".filter_active").classList.remove("filter_active");
+    button.className = "filter_active";
 
-    if ("Appartements" == this.textContent) {
-      button.className = "filter_active";
-      filter(button, works);
+    // switch ( this.textContent) {
+    //   case "Appartements":
+    //     button.className = "filter_active";
+    //     break;
 
-      Filtres.appendChild(button);
-    }
-    if ("Objets" == this.textContent) {
-      button.className = "filter_active";
-      filter(button, works);
+    //     case "Objets":
+    //     button.className = "filter_active";
+    //     break;
 
-      Filtres.appendChild(button);
-    }
-    if ("Hotels & restaurants" == this.textContent) {
-      button.className = "filter_active";
-      filter(button, works);
+    //   default:
+    //     break;
+    // }
 
-      Filtres.appendChild(button);
-    }
+    // if ("Appartements" == this.textContent) {
+
+    //   filter(button, works);
+
+    //   Filtres.appendChild(button);
+    // }
+    // if ("Objets" == this.textContent) {
+    //   button.className = "filter_active";
+    //   filter(button, works);
+
+    //   Filtres.appendChild(button);
+    // }
+    // if ("Hotels & restaurants" == this.textContent) {
+    //   button.className = "filter_active";
+    //   filter(button, works);
+
+    //   Filtres.appendChild(button);
+    // }
   });
 }
